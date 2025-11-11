@@ -19,7 +19,7 @@ export async function getProjects() {
     const client = getContentfulClient()
     const entries = await client.getEntries({
       content_type: 'project',
-      order: '-fields.publishedDate',
+      order: '-fields.publishedDate' as any,
     })
     return entries.items.map((item) => ({
       ...item.fields,
@@ -36,7 +36,7 @@ export async function getBlogPosts(limit?: number) {
     const client = getContentfulClient()
     const entries = await client.getEntries({
       content_type: 'post',
-      order: '-fields.publishedDate',
+      order: '-fields.publishedDate' as any,
       limit: limit || 100,
     })
     return entries.items.map((item) => ({
@@ -73,7 +73,7 @@ export async function getTimelineItems() {
     const client = getContentfulClient()
     const entries = await client.getEntries({
       content_type: 'timelineItem',
-      order: 'fields.date',
+      order: 'fields.date' as any,
     })
     return entries.items.map((item) => ({
       ...item.fields,
