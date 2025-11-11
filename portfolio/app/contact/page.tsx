@@ -50,7 +50,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-300">
-              Have a question or want to collaborate? I'd love to hear from you.
+              Have a question or want to collaborate? I&apos;d love to hear from you.
             </p>
           </motion.div>
 
@@ -61,7 +61,7 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
               className="glass rounded-xl p-6"
             >
-              <h3 className="text-2xl font-bold text-white mb-4">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Let&apos;s Connect</h3>
               <div className="space-y-4">
                 <a
                   href="https://www.linkedin.com/in/shaiza-malik/"
@@ -171,7 +171,7 @@ export default function Contact() {
               </button>
 
               {status === 'success' && (
-                <p className="text-green-400 text-center">Thank you! I'll get back to you soon.</p>
+                <p className="text-green-400 text-center">Thank you! I&apos;ll get back to you soon.</p>
               )}
               {status === 'error' && (
                 <p className="text-red-400 text-center">Something went wrong. Please try again.</p>

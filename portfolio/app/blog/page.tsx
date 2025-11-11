@@ -30,7 +30,7 @@ export default async function Blog() {
                 No blog posts yet, but check back soon!
               </p>
               <p className="text-gray-400">
-                I'm working on sharing my experiences and learnings in AI and Machine Learning.
+                I&apos;m working on sharing my experiences and learnings in AI and Machine Learning.
               </p>
             </div>
           </div>
