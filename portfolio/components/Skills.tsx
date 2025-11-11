@@ -17,7 +17,7 @@ export default function Skills() {
           Skills & Technologies
         </motion.h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 gap-3">
           {skillsList.map((name, index) => (
             <SkillCard
               key={name}

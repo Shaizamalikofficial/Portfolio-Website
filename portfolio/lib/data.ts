@@ -32,20 +32,10 @@ export const skills: string[] = [
   'Python',
   'NumPy',
   'Pandas',
-  'Matplotlib',
-  'Seaborn',
   'Scikit-learn',
-  'Machine Learning',
-  'Supervised Learning',
-  'Unsupervised Learning',
-  'Data Preprocessing',
-  'Data Visualization',
+  'Matplotlib & Seaborn',
   'Feature Engineering',
   'Model Evaluation',
-  'ANN',
-  'Jupyter Notebook',
-  'VS Code',
-  'GitHub',
 ]
 
 export const links = {
