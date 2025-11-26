@@ -25,7 +25,7 @@ Install and run
 npm install
 npm run dev
 ```
-App runs on `http://localhost:3000`
+App runs on https://shaizamalikai.vercel.app/
 
 ## Available Scripts
 - `npm run dev` starts the dev server
