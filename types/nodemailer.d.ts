@@ -1,0 +1,19 @@
+declare module 'nodemailer';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
