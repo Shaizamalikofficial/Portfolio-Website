@@ -44,7 +44,7 @@ export default function Projects() {
           <p className="text-gray-400 mb-4">More projects coming soon...</p>
           <div className="inline-block glass rounded-lg p-8 max-w-md">
             <p className="text-gray-300">
-              I'm constantly working on new projects and learning opportunities. 
+              I'm constantly working on new projects and learning opportunities.
               Check back soon for updates!
             </p>
           </div>
@@ -53,4 +53,3 @@ export default function Projects() {
     </div>
   )
 }
-
