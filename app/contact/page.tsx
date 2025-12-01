@@ -58,7 +58,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-300">
-              Have a question or want to collaborate? I'd love to hear from you.
+              Have a question or want to collaborate? I&apos;d love to hear from you.
             </p>
           </motion.div>
 
@@ -69,7 +69,7 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
               className="glass rounded-xl p-6"
             >
-              <h3 className="text-2xl font-bold text-white mb-4">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Let&apos;s Connect</h3>
               <div className="space-y-4">
                 <a
                   href="https://www.linkedin.com/in/shaiza-malik/"
