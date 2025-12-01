@@ -19,7 +19,7 @@ export async function getProjects() {
     const client = getContentfulClient()
     const entries = await client.getEntries({
       content_type: 'project',
-      order: '-fields.publishedDate',
+      order: ['-fields.publishedDate'],
     })
     return entries.items.map((item) => ({
       ...item.fields,
@@ -36,7 +36,7 @@ export async function getBlogPosts(limit?: number) {
     const client = getContentfulClient()
     const entries = await client.getEntries({
       content_type: 'post',
-      order: '-fields.publishedDate',
+      order: ['-fields.publishedDate'],
       limit: limit || 100,
     })
     return entries.items.map((item) => ({
@@ -50,7 +50,19 @@ export async function getBlogPosts(limit?: number) {
   }
 }
 
-export async function getBlogPost(slug: string) {
+export interface BlogPost {
+  id: string
+  title: string
+  slug: string
+  publishedDate: string
+  excerpt: string
+  content: any
+  coverImage: any
+  tags: string[]
+  seoDescription?: string
+}
+
+export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   try {
     const client = getContentfulClient()
     const entries = await client.getEntries({
@@ -58,10 +70,22 @@ export async function getBlogPost(slug: string) {
       'fields.slug': slug,
       limit: 1,
     })
-    return entries.items[0] ? {
-      ...entries.items[0].fields,
-      id: entries.items[0].sys.id,
-    } : null
+
+    if (entries.items.length > 0) {
+      const fields = entries.items[0].fields as any
+      return {
+        id: entries.items[0].sys.id,
+        title: fields.title,
+        slug: fields.slug,
+        publishedDate: fields.publishedDate,
+        excerpt: fields.excerpt,
+        content: fields.content,
+        coverImage: fields.coverImage,
+        tags: fields.tags,
+        seoDescription: fields.seoDescription,
+      }
+    }
+    return null
   } catch (error) {
     console.error('Error fetching blog post:', error)
     return null
@@ -73,7 +97,7 @@ export async function getTimelineItems() {
     const client = getContentfulClient()
     const entries = await client.getEntries({
       content_type: 'timelineItem',
-      order: 'fields.date',
+      order: ['fields.date'],
     })
     return entries.items.map((item) => ({
       ...item.fields,
